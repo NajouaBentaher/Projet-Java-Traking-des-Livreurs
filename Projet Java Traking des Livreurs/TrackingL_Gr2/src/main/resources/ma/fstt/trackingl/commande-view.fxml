@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox prefHeight="600.0" prefWidth="672.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ma.fstt.trackingl.CommandeController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <children>
+        <AnchorPane prefHeight="602.0" prefWidth="677.0">
+            <children>
+                <TextField fx:id="nom_produit" layoutX="16.0" layoutY="192.0" prefHeight="26.0" prefWidth="208.0" promptText="identifient ..." />
+                <Label layoutX="18.0" layoutY="167.0" text="Produit :" />
+                <Label layoutX="18.0" layoutY="226.0" text="Livreur :" />
+                <TextField fx:id="nom_livreur" layoutX="16.0" layoutY="252.0" prefHeight="26.0" prefWidth="208.0" promptText="identifient ..." />
+                <Label layoutX="18.0" layoutY="290.0" text="Date debut :" />
+                <TextField fx:id="datedebut" layoutX="16.0" layoutY="316.0" prefHeight="26.0" prefWidth="208.0" promptText="Date de debut" />
+                <Label layoutX="18.0" layoutY="353.0" text="Date fin :" />
+                <TextField fx:id="datefin" layoutX="16.0" layoutY="379.0" prefHeight="26.0" prefWidth="208.0" promptText="Date de fin" />
+
+                <Button fx:id="ok" layoutX="14.0" layoutY="438.0" mnemonicParsing="false" onAction="#onSaveButtonClick" prefHeight="30.0" prefWidth="58.0" style="-fx-background-color: #7494cb;" text="Save" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Button>
+                <Button fx:id="ook" layoutX="84.0" layoutY="438.0" mnemonicParsing="false" onAction="#onUpdateButtonClick" prefHeight="30.0" prefWidth="58.0" style="-fx-background-color: #7494cb;" text="Edit" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Button>
+                <Button fx:id="oook" layoutX="156.0" layoutY="438.0" mnemonicParsing="false" onAction="#onDeleteButtonClick" prefHeight="30.0" prefWidth="66.0" style="-fx-background-color: #7494cb;" text="Delete" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Button>
+
+                <TableView fx:id="mytable" layoutX="261.0" layoutY="27.0" prefHeight="424.0" prefWidth="357.0">
+                    <columns>
+                        <TableColumn fx:id="col_id" prefWidth="39.0" text="id" />
+                        <TableColumn fx:id="col_produit" prefWidth="81.4000244140625" text="Produit" />
+                        <TableColumn fx:id="col_livreur" prefWidth="73.0" text="Livreur" />
+                        <TableColumn fx:id="col_debut" prefWidth="79.00003051757812" text="date debut" />
+                        <TableColumn fx:id="col_fin" prefWidth="83.4000244140625" text="date fin" />
+
+                    </columns>
+                </TableView>
+                <Button fx:id="button" layoutX="20.0" layoutY="512.0" mnemonicParsing="false" onAction="#AfficherAccueil" style="-fx-background-color: #9a2033;" text="&lt; Exit" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Button>
+                <Label layoutX="-6.0" layoutY="45.0" prefHeight="35.0" prefWidth="261.0" text="Gestion Des Commandes" textFill="#7494cb">
+                    <font>
+                        <Font name="System Bold" size="22.0" />
+                    </font>
+                </Label>
+                <Button fx:id="search" layoutX="207.0" layoutY="114.0" mnemonicParsing="false" onAction="#onSearchButtonClick" prefHeight="18.0" prefWidth="39.0" style="-fx-background-color: #9a2033;" text="OK" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+                <TextField fx:id="nomm" layoutX="10.0" layoutY="113.0" prefHeight="26.0" prefWidth="189.0" promptText=" chercher livreur (nom) ..." />
+            </children>
+        </AnchorPane>
+    </children>
+
+
+</VBox>

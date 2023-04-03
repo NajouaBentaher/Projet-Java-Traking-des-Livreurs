@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox prefHeight="600.0" prefWidth="672.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ma.fstt.trackingl.ProduitController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <children>
+      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="35.0" prefWidth="660.0" text="Gestion des Produits" textAlignment="CENTER" textFill="#7494cb">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+        <Label text="Nom :" />
+        <TextField fx:id="nom" promptText="Nom Produit ...." />
+        <Label text="Prix :" />
+        <TextField fx:id="prix" promptText="Prix" />
+        <Label text="Description :" />
+        <TextField fx:id="description" promptText="Description ..." />
+      <VBox>
+         <children>
+            <TextFlow accessibleRole="BUTTON" lineSpacing="1.0" textAlignment="CENTER">
+               <children>
+
+                    <Button fx:id="okk" mnemonicParsing="false" onAction="#onSaveButtonClick" prefHeight="26.0" prefWidth="61.0" style="-fx-background-color: #7494cb;" text="Save" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Button>
+                  <Label text="                      " textFill="WHITE" />
+                  <Label />
+                    <Button fx:id="ookkk" mnemonicParsing="false" onAction="#onUpdateButtonClick" prefHeight="26.0" prefWidth="63.0" style="-fx-background-color: #7494cb;" text="Edit" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Button>
+                  <Label prefHeight="18.0" prefWidth="77.0" text="                 " textFill="WHITE" />
+                    <Button fx:id="oookkkk" accessibleRole="TEXT" alignment="TOP_RIGHT" contentDisplay="CENTER" depthTest="ENABLE" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#onDeleteButtonClick" prefHeight="30.0" prefWidth="67.0" style="-fx-background-color: #7494cb;" text="Delete" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Button>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <cursor>
+                  <Cursor fx:constant="MOVE" />
+               </cursor>
+            </TextFlow>
+         </children>
+      </VBox>
+
+        <TableView fx:id="mytable" prefHeight="200.0" prefWidth="200.0">
+            <columns>
+                <TableColumn fx:id="col_id" prefWidth="75.0" text="id" />
+                <TableColumn fx:id="col_nom" prefWidth="171.60000610351562" text="nom" />
+                <TableColumn fx:id="col_prix" prefWidth="153.99996948242188" text="prix" />
+                <TableColumn fx:id="col_description" prefWidth="231.0" text="description" />
+            </columns>
+        </TableView>
+        <Button fx:id="button" layoutX="20.0" layoutY="512.0" mnemonicParsing="false" onAction="#AfficherAccueil" style="-fx-background-color: #9a2033;" text="&lt; Exit" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+    </children>
+
+
+</VBox>
